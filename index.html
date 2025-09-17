@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thiranex - EduTech Learning Platform</title>
+  <style>
+    /* Global */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9fcff;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar */
+    header {
+      background-color: #e6f2ff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 26px;
+      font-weight: bold;
+      color: #0059b3;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li {
+      font-weight: bold;
+      color: #003d80;
+      cursor: pointer;
+    }
+
+    nav ul li:hover {
+      color: #0073e6;
+    }
+
+    /* Mobile menu toggle button */
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+      color: #003d80;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      background: linear-gradient(to right, #e6f2ff, #ffffff);
+      gap: 30px;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h2 {
+      font-size: 40px;
+      color: #003d80;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .btn {
+      background-color: #0073e6;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #005bb5;
+    }
+
+    .hero img {
+      width: 450px;
+      border-radius: 10px;
+    }
+
+    /* Home Section */
+    .home {
+      padding: 60px 40px;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    .home h2 {
+      font-size: 34px;
+      color: #003d80;
+      margin-bottom: 20px;
+    }
+
+    .home p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Courses Section */
+    .courses {
+      padding: 50px;
+      text-align: center;
+    }
+
+    .courses h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #003d80;
+    }
+
+    .course-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .course {
+      background: #ffffff;
+      border: 1px solid #d9e6f2;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: left;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .course:hover {
+      transform: translateY(-5px);
+    }
+
+    .course img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .course h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #0059b3;
+    }
+
+/* Footer */
+footer {
+  background: #6ad0ff;
+  color: #fff;
+  padding: 40px 20px 20px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 100px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-container div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-container h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-container p,
+.footer-container a,
+.footer-container ul li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #f1f1f1;
+}
+
+.footer-container a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+  border-top: 1px solid #fff;
+  padding-top: 10px;
+}
+
+/* Social Media Icons */
+.footer-social {
+  margin-top: 15px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #00ffdd; /* Yellow on hover */
+}
+
+
+    /* Responsive Styles */
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text {
+        max-width: 100%;
+      }
+      .hero img {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #e6f2ff;
+        position: absolute;
+        top: 65px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .hero-text h2 {
+        font-size: 28px;
+      }
+      .hero-text p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <h1>Thiranex</h1>
+    <nav>
+      <div class="menu-toggle">☰</div>
+      <ul>
+        <a>Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="internship.html">Internship</a>
+        <a>About Us</a>
+        <a>Contact</a>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Learn Programming & Development</h2>
+      <p>Master in-demand skills like HTML, CSS, JavaScript, Python, Java, C, C++, React, Angular, and Full Stack Development with Thiranex EduTech Platform.</p>
+      <a href="courses.html" class="btn">Explore Courses</a>
+    </div>
+    <img src="https://img.freepik.com/free-vector/online-tutorials-concept_52683-37481.jpg" alt="Learning">
+  </section>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <h2>Welcome to Thiranex EduTech Platform</h2>
+    <p>
+      Thiranex is your trusted <strong>Edutech platform</strong> designed to help learners master programming, web technologies, and modern development tools. 
+      Our goal is to transform beginners into skilled developers by offering hands-on training in HTML, CSS, Python, Java, C, C++, React, Angular, and Full Stack Development.  
+      Join us to kickstart your coding journey with structured courses and real-world projects.
+    </p>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="courses" id="courses">
+    <h2>Our Popular Courses</h2>
+    <div class="course-container">
+      <div class="course">
+        <img src="https://img.freepik.com/free-photo/html-system-website-concept_23-2150376772.jpg" alt="HTML CSS">
+        <h3>Web Development (HTML, CSS, JS)</h3>
+        <p>Learn how to build modern, responsive websites from scratch using HTML5, CSS3, and JavaScript.</p>
+      </div>
+      <div class="course">
+        <img src="https://img.freepik.com/free-photo/python-programming-language-coding_23-2150012298.jpg" alt="Python">
+        <h3>Python Programming</h3>
+        <p>Master Python for software development, automation, AI, and data science with hands-on projects.</p>
+      </div>
+      <div class="course">
+        <img src="https://img.freepik.com/free-photo/java-programming-background-coding_23-2150038849.jpg" alt="Java">
+        <h3>Java & C/C++</h3>
+        <p>Understand core concepts of object-oriented programming and strengthen your problem-solving skills.</p>
+      </div>
+      <div class="course">
+        <img src="https://img.freepik.com/free-photo/coding-programming-application-development-technology_53876-120052.jpg" alt="React Angular">
+        <h3>React & Angular</h3>
+        <p>Build dynamic, scalable, and interactive frontend applications with React and Angular frameworks.</p>
+      </div>
+      <div class="course">
+        <img src="https://img.freepik.com/free-photo/coding-man-laptop_23-2148864985.jpg" alt="Full Stack">
+        <h3>Full Stack Development</h3>
+        <p>Become a full stack developer by learning frontend, backend, databases, and deployment strategies.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- ====== Footer ====== -->
+<footer id="contact">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Thiranex EduTech</h3>
+      <p>
+        Thiranex EduTech is a leading learning platform that helps students and professionals 
+        master modern technologies like <b>HTML, CSS, Python, Java, C, C++, React, Angular</b>, 
+        and <b>Full Stack Development</b>.  
+        We aim to build skills for the future!
+      </p>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:info@thiranex.com">info@thiranex.com</a></p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Address: Ambattur, Chennai - 600053, India</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/thiranex"><i class="fab fa-linkedin"></i></a>
+        <a href="https://youtube.com/@thiranex?si=9TLz-5NiWrvnlEiS"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/thiranex/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer-bottom">© 2025 Thiranex EduTech. All Rights Reserved.</p>
+</footer>
+
+
+  <!-- JS for menu toggle + smooth scroll -->
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Smooth scroll for nav items
+    document.querySelectorAll('nav ul li').forEach(link => {
+      link.addEventListener('click', () => {
+        if(link.innerText === "Home") {
+          document.querySelector("#home").scrollIntoView({ behavior: "smooth" });
+        }
+        if(link.innerText === "Courses") {
+          document.querySelector("#courses").scrollIntoView({ behavior: "smooth" });
+        }
+        navMenu.classList.remove('active'); // close menu on click (mobile)
+      });
+    });
+  </script>
+</body>
+</html>

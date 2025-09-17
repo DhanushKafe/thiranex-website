@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internships - Thiranex EduTech Platform</title>
+  <style>
+    body { margin:0; font-family:Arial,sans-serif; background:#f5faff; color:#222; }
+    /* Navbar */
+    a {
+      
+      text-decoration: none;
+      color: inherit;
+      space-between: 15px;
+      padding-left: 20px;
+    }
+    header {
+      background-color: #e6f2ff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 26px;
+      font-weight: bold;
+      color: #0059b3;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li {
+      font-weight: bold;
+      color: #003d80;
+      cursor: pointer;
+    }
+
+    nav ul li:hover {
+      color: #0073e6;
+    }
+    .container { max-width:1200px; margin:auto; padding:40px 20px; }
+    h2 { text-align:center; margin-bottom:30px; color:#1976d2; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .card { background:white; border-radius:12px; padding:15px; box-shadow:0 4px 8px rgba(0,0,0,0.1); transition: transform 0.2s; text-align:center; }
+    .card:hover { transform: translateY(-5px); }
+    .card img { width:100%; height:150px; object-fit:cover; border-radius:10px; margin-bottom:10px; }
+    .card h3 { margin:0; color:#0d47a1; font-size:1.1rem; }
+    .apply-btn { display:inline-block; margin-top:10px; padding:8px 15px; background-color:#2196f3; color:white; text-decoration:none; border-radius:6px; font-weight:bold; transition:background-color 0.2s; }
+    .apply-btn:hover { background-color:#1976d2; }
+    /* Footer */
+footer {
+  background: #6ad0ff;
+  color: #fff;
+  padding: 40px 20px 20px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 100px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-container div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-container h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-container p,
+.footer-container a,
+.footer-container ul li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #f1f1f1;
+}
+
+.footer-container a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+  border-top: 1px solid #fff;
+  padding-top: 10px;
+}
+
+/* Social Media Icons */
+.footer-social {
+  margin-top: 15px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #ffc107; /* Yellow on hover */
+}
+    @media (max-width:600px) { header { flex-direction:column; text-align:center; } nav { margin-top:10px; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Thiranex</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    
+    <a href="index.html#courses">Courses</a>
+    <a href="internship.html">Internships</a>
+    <a href="index.html#contact">Our Team</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Available Internships</h2>
+  <div class="grid">
+    <div class="card">
+<img src="Appdev.jpg" alt="App Development">
+      <h3>App Development</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="Aidev.jpg" alt="Artificial Intelligence">
+      <h3>Artificial Intelligence</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="autocaddev.jpg" alt="AutoCAD">
+      <h3>AutoCAD</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="backenddev.jpg" alt="Back End Development">
+      <h3>Back End Development</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="biomadev.jpg" alt="Bioinformatics">
+      <h3>Bioinformatics</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="biotechdev.jpg" alt="Biotechnology">
+      <h3>Biotechnology</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="blockchaindev.jpg" alt="Blockchain Development">
+      <h3>Blockchain Development</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="markettingdev.jpg" alt="Business & Marketing Strategy">
+      <h3>Business & Marketing Strategy</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="cprodev.jpg" alt="C Programming">
+      <h3>C Programming</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="c++dev.jpg" alt="C++ Programming">
+      <h3>C++ Programming</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="civildev.jpg" alt="Civil Engineering">
+      <h3>Civil Engineering & Structural Design</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="cloud.jpg" alt="Cloud Computing">
+      <h3>Cloud Computing</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="contentwritdev.jpg" alt="Content Writing">
+      <h3>Content Writing & Research</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="cyber.jpg" alt="Cyber Security">
+      <h3>Cyber Security</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="ataana.jpg" alt="Data Analytics">
+      <h3>Data Analytics</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="datasci.jpg" alt="Data Science">
+      <h3>Data Science</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="devops.jpg" alt="DevOps">
+      <h3>DevOps</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="digi.jpg
+      " alt="Digital Marketing">
+      <h3>Digital Marketing & Branding</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="finan.jpg" alt="Finance">
+      <h3>Finance & Investment Analysis</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="front.jpg" alt="Front End Development">
+      <h3>Front End Development</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="full.jpg" alt="Full Stack Development">
+      <h3>Full Stack Development</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="gra.jpg" alt="Graphics Designing">
+      <h3>Graphics Designing</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="java.jpg" alt="Java Programming">
+      <h3>Java Programming</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="mac.jpg" alt="Machine Learning">
+      <h3>Machine Learning</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="mec.jpg" alt="Mechanical Design">
+      <h3>Mechanical Design & Simulation</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="pharma.jpg" alt="Pharmaceutical Research">
+      <h3>Pharmaceutical Research</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="po.jpg" alt="Power BI">
+      <h3>Power BI</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="py.jpg" alt="Python Programming">
+      <h3>Python Programming</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="rob.jpg" alt="Robotics & Automation">
+      <h3>Robotics & Automation</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="stoc.jpg" alt="Stock Market">
+      <h3>Stock Market & Trading Basics</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="card">
+      <img src="ui.jpg" alt="UI/UX Design">
+      <h3>UI/UX Design</h3>
+      <a href="https://forms.gle/nR3YrE2bK42q8HRP9" class="apply-btn">Apply Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- ====== Footer ====== -->
+<footer id="contact">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Thiranex EduTech</h3>
+      <p>
+        Thiranex EduTech is a leading learning platform that helps students and professionals 
+        master modern technologies like <b>HTML, CSS, Python, Java, C, C++, React, Angular</b>, 
+        and <b>Full Stack Development</b>.  
+        We aim to build skills for the future!
+      </p>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:info@thiranex.com">info@thiranex.com</a></p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Address: Ambattur, Chennai - 600053, India</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/thiranex"><i class="fab fa-linkedin"></i></a>
+        <a href="https://youtube.com/@thiranex?si=9TLz-5NiWrvnlEiS"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/thiranex/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer-bottom">© 2025 Thiranex EduTech. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
